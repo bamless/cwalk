@@ -56,6 +56,8 @@ endif()
 
 # enable tests
 if(ENABLE_TESTS)
+  include(CTest)
+
   message("-- Tests enabled")
   enable_testing()
 
