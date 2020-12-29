@@ -9,7 +9,6 @@ project(cwalk
 # include utilities
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(EnableWarnings)
-include(CTest)
 include(CreateTestList)
 include(CMakePackageConfigHelpers)
 
@@ -54,6 +53,8 @@ endif()
 
 # enable tests
 if(ENABLE_TESTS)
+  include(CTest)
+
   message("-- Tests enabled")
   enable_testing()
 
